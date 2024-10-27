@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-family: Verdana;">
+    <h1>Méthodes pour les tableaux</h1>
+    <p><strong>1. forEach()</strong> : la méthode forEach() permet d'exécuter une fonction donnée sur chaque élément du tableau.</p>
+    <p><strong>2. map()</strong> : la méthode map() crée un nouveau tableau avec les résultats de l'appel d'une fonction fournie sur chaque élément du tableau appelant.</p>
+    <p><strong>3. filter()</strong> : la méthode filter() crée un nouveau tableau contenant les éléments du tableau d'oigine qui remplissent une condition déterminée par la fonction de rappel (callback). La méthode parcourrt chaque élément du tableau et inclut ceux qui satisfont la condition dans le tableau de retour.</p>
+    <p><strong>4. concat()</strong> : la méthode concat() est utilisée afin de fusionner deux ou plusieurs tableaux en les concaténant. Cette méthode ne modifie pas les tableaux existants, elle renvoie un nouveau tableau qui est le résultat de l'opération.</p>
+    <p><strong>5. find()</strong> : la méthode find() renvoie la valeur du premier élément trouvé dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Si aucun élément n'est trouvé, la valeur undefined sera renvoyée.</p>
+    <p><strong>6. findIndex()</strong> : la méthode findIndex() renvoie un indice d'un élément d'un tableau si cet élément remplit une condition définie par une fonction de test donnée. S'il n'y a aucun élément satisfaisant, -1 sera renvoyé.</p>
+    <p><strong>7. indexOf()</strong> : la méthode indexOf() renvoie l'indice de la première occurence de la valeur recherchée dans un tableau. Elle retournera -1 si la valeur n'est pas trouvée.</p>
+    <p><strong>8. lastIndexOf()</strong> : la méthode lastIndexOf() permet de renvoyer le dernier indice pour lequel une valeur donnée est présente dans un tableau. Si la valeur donnée n'est pas présente, le résultat sera -1.</p>
+    <p><strong>9. some()</strong> : la méthode some() teste si au moins un élément du tableau passe le test implémenté par la fonction fournie. Elle renvoie un booléen indiquant le résultat du test.</p>
+    <p><strong>10. every()</strong> : la méthode every() permet de tester si tous les éléments d'un tableau vérifient une condition donnée par une fonction en argument. Cette méthode renvoie un booléen pour le résultat du test.</p>
+    <p><strong>11. includes()</strong> : la méthode includes() est utilisée pour déterminer si un tableau ou une chaîne de caractères contient une valeur spécifiée.</p>
+    <p><strong>12. push()</strong> : la méthode push() ajoute un ou plusieurs éléments à la fin d'un tableau et retourne la nouvelle taille du tableau.</p>
+    <p><strong>13. unshift()</strong> : la méthode unshift() ajoute un ou plusieurs éléments au début d'un tableau et retourne la nouvelle taille du tableau.</p>
+    <p><strong>14. pop()</strong> : la méthode pop() supprime le dernier élément d'un tableau et retourne cet élément. Cette méthode modifie la longueur du tableau.</p>
+    <p><strong>15. shift()</strong> : la méthode shift() permet de retirer le premier élément d'un tableau et de renvoyer cet élément. Cette méthode modifie la longueur du tableau.</p>
+    <p><strong>16. toString()</strong> : la méthode toString() renvoie une chaîne de caractères contenant les éléments du tableau, séparés par une virgule.</p>
+    <p><strong>17. join()</strong> : la méthode join() crée et renvoie une nouvelle chaîne de caractères en concaténant tous les éléments d'un tableau (ou d'un objet semblable à un tableau). La concaténation utilise la virgule ou une autre chaîne, fournie en argument, comme séparateur.</p>
+    <p><strong>18. fill()</strong> : la méthode fill() est utilisée pour remplir tous les éléments d'un tableau avec une valeur statique. Cette méthode renvoie le tableau modifié. La syntaxe est celle-ci : array.fill(value, start, end).
+        <ul>
+            <li>
+                value : la valeur avec laquelle remplir le tableau. Cela peut être n'importe quel type de valeur (nombre, chaîne, objet...).
+            </li>
+            <li>
+                start (optionnel) : l'indice à partir duquel commencer à remplir le tableau (par défaut 0).
+            </li>
+            <li>
+                end (optionnel) : l'indice à laquelle arrêter le remplissage du tableau (non inclus). Si omis, il remplit jusqu'à la fin du tableau.
+            </li>
+        </ul>
+    </p>
+    <p><strong>19. copyWithin()</strong> : la méthode copyWithin() est utilisée pour copier une partie d'un tableau dans une autre position au sein du même tableau, sans modifier sa longueur. La syntaxe est celle-ci : array.copyWithin(target, start, end).
+        <ul>
+            <li>
+                target : l'index où commence à copier les éléments dans le tableau. Si target est négatif, il est traité comme un index à partir de la fin du tableau.
+            </li>
+            <li>
+                start (optionnel) : l'index à partir duquel commencer à copier les éléments. Si omis, il commence à 0. Si start est négatif, il est également traité comme un index à partir de la fin du tableau.
+            </li>
+            <li>
+                end (optionnel) : l'index à partir duquel arrêter la copie du tableau (non inclus). Si omis, il copiera jusqu'à la fin du tableau. Si end est négatif, il est traîté de la même manière que start.
+            </li>
+        </ul>
+    </p>
+    <p><strong>20. slice()</strong> : la méthode slice() est utilisée pour créer une copie superficielle d'une portion d'un tableau ou d'une chaîne de caractères sans altérer le tableau ou la chaîne d'origine. La syntaxe est celle-ci : slice(start, end).
+        <ul>
+            <li>
+                start (optionnel) : l'index à partir duquel commence l'extraction. Si omis, cela commence à 0. Si négatif, il est traité comme un index à la fin du tableau.
+            </li>
+            <li>
+                end (optionnel) : l'indice à laquelle arrêter l'extraction (non inclus). Si omis, cela va jusqu'à la fin du tableau. Si négatif, il est traité comme un index à partir de la fin du tableau.
+            </li>
+        </ul>
+    </p>
+    <p><strong>21. splice()</strong> : la méthode splice() est utilisée pour modifier un tableau en ajoutant, supprimant ou remplaçant des éléments. La syntaxe est celle-ci : array.splice(start, deleteCount, item1, item2, ...). Le tableau d'origine est donc modifié.
+        <ul>
+            <li>
+                start : l'index à partir duquel commencer les modifications dans le tableau.
+            </li>
+            <li>
+                deleteCount : le nombre d'éléments à supprimer à partir de l'index start. Si omis, tous les éléments à partir de start jusqu'à la fin du tableau seront supprimés.
+            </li>
+            <li>
+                item1, item2, ... (optionnel) : un ou plusieurs éléments à ajouter à partir de l'index start. Si aucun élément n'est spécifié, splice() supprime simplement les éléments.
+            </li>
+        </ul>
+    </p>
+    <p><strong>22. sort()</strong> : la méthode sort() est utilisée pour trier les éléments d'un tableau. Elle modifie le tableau d'origine et retourne le tableau trié. Par défaut, cette méthode trie les éléments comme des chaînes de caractères en fonction de l'ordre Unicode. Sa syntaxe est celle-ci : array.sort(compareFunction).
+        <ul>
+            <li>compareFunction (optionnel) : une fonction qui définit l'odre de tri. Si ce paramètre est omis, les éléments sont triés en convertissant chacun d'eux en une chaîne et en les comparant par ordre lexicographique.</li>
+        </ul>
+    </p>
+    <p><strong>23. reverse()</strong> : la méthode reverse() est utilisée pour inverser l'ordre des éléments d'un tableau. Cette méthode modifie le tableau d'origine et retourne le tableau inversé.</p>
+    <p><strong>24. from()</strong> : la méthode from() est utilisée pour créer un nouveau tableau à partir d'un objet semblable à un tableau ou d'un objet itérable. Cette méthode est très utile pour convertir des objets qui ne sont pas des tableaux en tableaux. La syntaxe est celle-ci : Array.from(arrayLike, mapFunction, thisArg).
+        <ul>
+            <li>
+                arrayLike : un objet semblable à un tableau (comme un tableau, une chaîne de caractères) qu'on souhaite convertir en tableau.
+            </li>
+            <li>
+                mapFunction (optionnel) : une fonction à appliquer à chaque élément du tableau créé.
+            </li>
+            <li>
+                thisArg (optionnel) : une valeur à exécuter comme this lors de l'exécution de mapFunction.
+            </li>
+        </ul>
+    </p>
+    <p><strong>25. isArray()</strong> : la méthode isArray() est utiliser pour déterminer si une valeur donnée est un tableau. Cette méthode retourne true si la valeur et un tableau et false dans le cas contraire. La suntaxe est celle-ci Array.isArray(value)</p>
+    <p><strong>26. valueOf()</strong> : la méthode valueOf() est une méthode intégrée qui renvoie la valeur primitive d'un objet. Elle est généralement utilisée pour obtenir la valeur sous-jacente d'un objet lorsque celui-ci est utilisé dans un contexte où une valeur primitive est attendue, comme une opération mathématique ou une comparaison.
+        <ul>
+            <li>Objets de base : pour les objets de base, comme les nombres ou les chaînes, valueOf() retourne simplement leur valeur primitive.
+            </li>
+            <li>
+                Objets personnalisés : Pour des objets créés par l'utilisateur, tu peux définir ta propre méthode valueOf() pour retourner une valeur spécifique. 
+            </li>
+        </ul>
+    </p>
+    <p><strong>27. entries()</strong> : la méthode entries() en JavaScript est utilisée pour créer un nouvel objet Array Iterator qui contient des paires clé/valeur pour chaque index dans un tableau. Cela permet d'itérer facilement sur les indices et les valeurs du tableau. La méthode retourne un objet Array Iterator, que l'on peut utiliser avec une boucle for...of ou d'autres méthodes d'itération pour accéder aux paires clé/valeur.</p>
+    <p><strong>28. keys()</strong> : la méthode keys() est utilisée pour créer un nouvel objet Array Iterator qui contient les clés (indices) des éléments d'un tableau. Cela permet d'itérer sur les indices d'un tableau facilement. La méthode retourne un objet Array Iterator qui contient les clés (indices) du tableau.</p>
+    <p><strong>29. values()</strong> : La méthode values() est utilisée pour créer un nouvel objet Array Iterator qui contient les valeurs des éléments d'un tableau. Cela permet d'itérer facilement sur les valeurs sans se soucier des indices.</p>
+    <p><strong>30. reduce()</strong>La méthode reduce() est utilisée pour réduire un tableau à une seule valeur en appliquant une fonction de rappel sur chaque élément, en accumulant le résultat. C'est un outil très puissant pour effectuer des calculs ou transformations sur des tableaux. La syntaxe est celle-ci : array.reduce(callback, initialValue).
+        <ul>
+            <li>
+                callback : une fonction qui est appelée pour chaque élément du tableau. Elle prend 4 arguments :
+                <ul>
+                    <li>
+                        accumulator : La valeur accumulée retournée par le dernier appel de la fonction de rappel, ou la valeur initiale si spécifiée.
+                    </li>
+                    <li>
+                        currentValue : L'élément actuel du tableau en cours de traitement.
+                    </li>
+                    <li>
+                        currentIndex (optionnel) : L'indice de l'élément actuel.
+                    </li>
+                    <li>
+                        array (optionnel) : Le tableau d'origine sur lequel reduce() est appelé.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                initialValue (optionnel) : Une valeur à utiliser comme premier argument de accumulator dans le premier appel de la fonction de rappel. Si elle est omise, le premier élément du tableau est utilisé comme valeur initiale et currentValue commence à partir du deuxième élément.
+            </li>
+        </ul>
+    </p>
+    <p><strong>31. reduceRight()</strong>La méthode reduceRight() fonctionne de manière similaire à reduce(), mais elle itère sur les éléments d'un tableau en commençant par la fin et en allant vers le début. Cela signifie que le dernier élément du tableau est traité en premier. La syntaxe est celle-ci : array.reduceRight(callback, initialValue).
+        <ul>
+            <li>
+                callback : une fonction qui est appelée pour chaque élément du tableau. Elle prend 4 arguments :
+                <ul>
+                    <li>
+                        accumulator : La valeur accumulée retournée par le dernier appel de la fonction de rappel, ou la valeur initiale si spécifiée.
+                    </li>
+                    <li>
+                        currentValue : L'élément actuel du tableau en cours de traitement.
+                    </li>
+                    <li>
+                        currentIndex (optionnel) : L'indice de l'élément actuel.
+                    </li>
+                    <li>
+                        array (optionnel) : Le tableau d'origine sur lequel reduceRight() est appelé.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                initialValue (optionnel) : Une valeur à utiliser comme premier argument de accumulator dans le premier appel de la fonction de rappel. Si elle est omise, le dernier élément du tableau est utilisé comme valeur initiale et currentValue commence à partir de l'avant-dernier élément.
+            </li>
+        </ul>
+    </p>
+    <p><strong>32, flat()</strong> : la méthode flat() est utilisée pour aplanir un tableau, c'est-à-dire qu'elle réduit la profondeur de la structure d'un tableau en une seule dimension, ou à un certain niveau de profondeur spécifié. Cette méthode est très utile pour manipuler des tableaux imbriqués. La syntaxe est celle-ci : array.flat(depth). L'argument depth est optionnel : c'est un entier qui indique jusqu'à quel niveau de profondeur le tableau doit être aplani. La valeur par défaut est 1. En mettant Infinity, le tableau sera aplani complètement, quel que soit le nombre de niveaux d'imbrication.</p>
+    <p><strong>33, flatMap()</strong> : la méthode flatMap() est utilisée pour aplatir un tableau d'un niveau tout en appliquant une fonction de transformation à chaque élément. Elle combine donc les fonctionnalités de map() et flat(), ce qui en fait un outil très puissant pour manipuler des tableaux. La syntaxe est celle-ci : array.flatMap(callback(currentValue, index, array), thisArg). Cette méthode retourne un nouveau tableau contenant les résultats de la fonction callback, aplani d'un niveau.
+        <ul>
+            <li>
+                callback : une fonction qui est appelée pour chaque élément du tableau. Elle prend 3 arguments :
+                <ul>
+                    <li>
+                        currentValue : l'élément actuel du tableau en cours de traitement.
+                    </li>
+                    <li>
+                        index (optionnel) : l'indice de l'élément actuel.
+                    </li>
+                    <li>
+                        array (optionnel) : le tableau d'origine.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                thisArg (optionnel) : une valeur à utiliser comme this lors de l'exécution de callback.
+            </li>
+        </ul>
+    </p>
+
+    <script src="33, flatMap.js"></script>
+</body>
+</html>
